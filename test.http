@@ -1,0 +1,125 @@
+### Register User API
+POST http://localhost:8001/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "ervan",
+    "password" : "rahasia",
+    "name" : "Fernanda Ervan"
+}
+
+### Login User API
+POST http://localhost:8001/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "ervan",
+    "password" : "rahasia"
+}
+
+### Get Current User API
+GET http://localhost:8001/api/users/current
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+### Update Current User API
+PATCH http://localhost:8001/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+{
+    "name" : "Fernanda Ervans"
+}
+
+### Logout User API
+DELETE http://localhost:8001/api/users/logout
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+
+### Create Contact API
+POST http://localhost:8001/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+{
+    "first_name" : "Wahyu",
+    "last_name" : "Mustikaningsih",
+    "email" : "wahyu@gmail.com",
+    "phone" : "088914197841"
+}
+
+### Get Contact API #581
+GET http://localhost:8001/api/contacts/581
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+### Update Contact API #581
+PUT http://localhost:8001/api/contacts/581
+Content-Type: application/json
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+{
+    "first_name" : "Yesi",
+    "last_name" : "Silvia",
+    "email" : "yesi@gmail.com",
+    "phone" : "813141414141"
+}
+
+### Delete Contact API #580
+DELETE http://localhost:8001/api/contacts/580
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+### Search Contact API
+GET http://localhost:8001/api/contacts?email=yesi
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+### Create Address API #432
+POST http://localhost:8001/api/contacts/581/addresses
+Accept: application/json
+Content-Type: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+{
+    "street" : "gatak",
+    "city" : "gatak",
+    "province" : "skh",
+    "country" : "indonesia",
+    "postal_code" : "111111"
+}
+
+### Get Address API #49
+GET http://localhost:8001/api/contacts/581/addresses/49
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+### Update Address API #49
+PUT http://localhost:8001/api/contacts/581/addresses/49
+Accept: application/json
+Content-Type: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+{
+    "street" : "bentakan",
+    "city" : "baki",
+    "province" : "skh",
+    "country" : "indonesia",
+    "postal_code" : "111111"
+}
+
+### Remove Address API #49
+DELETE http://localhost:8001/api/contacts/581/addresses/49
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
+
+### List Address API
+GET  http://localhost:8001/api/contacts/581/addresses
+Accept: application/json
+Authorization: a6790dca-479e-48b6-b5c4-297723538293
